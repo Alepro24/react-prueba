@@ -2,6 +2,9 @@
 import React from 'react';
 import './App.css';
 
+import tasks from './sample/tasks.json';
+import Tasks from './components/Tasks';
+
 //Componente Helloworld
 /*function Helloworld(props) {
   return(
@@ -13,7 +16,7 @@ import './App.css';
 }*/
 
 //Componente Helloworld pero en clase
-
+/*
 class Helloworld extends React.Component {
   
   state={
@@ -46,7 +49,7 @@ class Helloworld extends React.Component {
     
   }
 }
-
+*/
 
 //Funcion flecha del Componente (Porque se guarda la funcion dentro de la constante App)
 /*
@@ -64,7 +67,7 @@ class app extends React.Component{
 
 //Componente App
 
-function App() {
+/* function App() {
   return (
     <div>
       This is my component: 
@@ -73,6 +76,20 @@ function App() {
       <Helloworld mytext="Hola!!" subtitle="Componente 4" />
     </div>
   );
+} */
+
+
+class App extends React.Component {
+  state = {
+    tasks:tasks
+  }
+  render() {
+    return(
+      <div>
+        <Tasks tasks={this.state.tasks}/>
+      </div>
+    );
+  }
 }
 
 export default App;
