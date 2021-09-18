@@ -87,10 +87,23 @@ class App extends React.Component {
   state = {
     tasks:tasks
   }
+
+  //Para añadir tareas desde el form
+  addTask = (title, description) => {
+    const newTask = {
+      title: title,
+      description: description,
+      id: this.state.tasks.length
+    }
+    this.setState({
+      tasks: [...this.state.tasks, newTask] //Agregar un nuevo elemento al arreglo
+    })
+  }
+
   render() {
     return(
       <div>
-        <TaskForm/>
+        <TaskForm addTask={this.addTask}/>
         <Tasks tasks={this.state.tasks}/>
       </div>
     );

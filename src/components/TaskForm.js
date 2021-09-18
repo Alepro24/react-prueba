@@ -9,7 +9,7 @@ export default class TaskForm extends Component{
     
     //Metodo para que no se refresque la pagina cada rato
     onSubmit = (e) => {
-        
+        this.props.addTask(this.state.title, this.state.description); //Ejecutando la funcion que esta en app desde taskfrom
         e.preventDefault();
     }
     onChange = (e) => {
