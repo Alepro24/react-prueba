@@ -24,7 +24,7 @@ class Task extends Component{
                 {tarea.done} - 
                 {tarea.id}
             <input type="checkbox"></input>
-            <button style={btnDelete}>
+            <button style={btnDelete} onClick={this.props.deleteTask.bind(this,tarea.id)}>
                 X
             </button>
             </p>

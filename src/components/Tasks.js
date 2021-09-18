@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 
 class Tasks extends React.Component{
     render(){
-        return(this.props.tasks.map(task => <Task tarea={task} key={task.id} />)
+        return(this.props.tasks.map(task => 
+        <Task 
+        tarea={task} 
+        key={task.id} 
+        deleteTask={this.props.deleteTask}
+        />)
           )
     }
 }
