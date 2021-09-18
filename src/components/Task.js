@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import './Task.css';
+import PropTypes from 'prop-types'; 
 
 class Task extends Component{
     //Otra funcion  para cambiar estilos
@@ -31,6 +32,10 @@ class Task extends Component{
     }
 }
 
+//Para validar el tipo de dato que espero de props
+Task.propTypes = {
+    tarea: PropTypes.object.isRequired
+}
 //Estilos en linea
 
 const btnDelete = {
