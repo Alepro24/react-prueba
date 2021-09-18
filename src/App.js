@@ -3,7 +3,11 @@ import React from 'react';
 import './App.css';
 
 import tasks from './sample/tasks.json';
+
+//Importando los componentes
 import Tasks from './components/Tasks';
+import TaskForm from './components/TaskForm';
+
 
 //Componente Helloworld
 /*function Helloworld(props) {
@@ -86,6 +90,7 @@ class App extends React.Component {
   render() {
     return(
       <div>
+        <TaskForm/>
         <Tasks tasks={this.state.tasks}/>
       </div>
     );
